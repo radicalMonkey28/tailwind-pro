@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header class="flex justify-between items-center p-4 bg-black text-white">
         <div class="logo">
@@ -16,14 +18,18 @@
                 &#9776; <!-- Hamburger icon -->
             </div>
             <ul id="nav-links" class="hidden lg:flex flex-col lg:flex-row lg:space-x-6 mt-4 lg:mt-0 text-lg">
-                <li><a href="index.html" id="home-link" class="text-white hover:text-gray-400 block lg:inline-block">Home</a></li>
-                <li><a href="services.html" id="services-link" class="text-white hover:text-gray-400 block lg:inline-block">Services</a></li>
-                <li><a href="about.html" id="about-link" class="text-white hover:text-gray-400 block lg:inline-block">About Us</a></li>
-                <li><a href="contact.html" id="contact-link" class="text-white hover:text-gray-400 block lg:inline-block">Contact Us</a></li>
+                <li><a href="index.html" id="home-link"
+                        class="text-white hover:text-teal-400 block lg:inline-block">Home</a></li>
+                <li><a href="services.html" id="services-link"
+                        class="text-white hover:text-teal-400 block lg:inline-block">Services</a></li>
+                <li><a href="about.html" id="about-link"
+                        class="text-white hover:text-teal-400 block lg:inline-block">About Us</a></li>
+                <li><a href="contact.html" id="contact-link"
+                        class="text-white hover:text-teal-400 block lg:inline-block">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <!-- Hero Section -->
         <section class="hero  text-center py-16 relative">
@@ -33,9 +39,10 @@
                     Professional <span class="text-teal-500">Planner</span> For Successful
                 </h1>
                 <h1 class="text-3xl md:text-5xl font-bold text-gray-900 relative z-10">Events</h1>
-                <p class="text-base md:text-lg text-gray-600 mt-4 relative z-10">Elevate Your Event Experience with Our Professional Planning Services</p>
+                <p class="text-base md:text-lg text-gray-600 mt-4 relative z-10">Elevate Your Event Experience with Our
+                    Professional Planning Services</p>
                 <p class="text-base md:text-lg text-gray-600 relative z-10">and create unforgettable memories</p>
-        
+
                 <div class="app-buttons flex justify-center space-x-4 mt-6 relative z-10">
                     <a href="#">
                         <img src="appstore.png" alt="Available on the App Store" class="h-12 md:h-16 w-auto">
@@ -44,13 +51,15 @@
                         <img src="googleplay.png" alt="Get it on Google Play" class="h-12 md:h-16 w-auto">
                     </a>
                 </div>
-        
+
                 <!-- Aligning images with MEMORY PLANNER heading -->
-                <img class="hero-image left absolute left-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0" src="left-image.png" alt="Left Decoration">
-                <img class="hero-image right absolute right-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0" src="right-image.png" alt="Right Decoration">
+                <img class="hero-image left absolute left-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0"
+                    src="left-image.png" alt="Left Decoration">
+                <img class="hero-image right absolute right-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0"
+                    src="right-image.png" alt="Right Decoration">
             </div>
         </section>
-        
+
         <!-- Promo Section -->
         <section class="promo-section bg-purple-100 rounded-xl p-8 mx-auto max-w-6xl my-12 relative overflow-visible">
             <div class="flex flex-col lg:flex-row items-center justify-between relative z-10">
@@ -59,7 +68,8 @@
                     <h3 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
                         Dine At Your Favorite Places And Pay Using Our App To Get Amazing Discount
                     </h3>
-                    <a href="#" class="inline-block bg-teal-500 text-white font-bold py-3 px-6 rounded-full hover:bg-teal-600 transition">
+                    <a href="#"
+                        class="inline-block bg-teal-500 text-white font-bold py-3 px-6 rounded-full hover:bg-teal-600 transition">
                         Get App Now
                     </a>
                 </div>
@@ -74,59 +84,173 @@
             <div class="absolute bottom-[-6.5rem] right-[1rem] sm:right-[1.5rem] sm:bottom-[-6.51rem] 
             md:right-[2rem] md:bottom-[-8.57rem] lg:right-[2rem] lg:bottom-[-17.15rem] 
             xl:right-[2rem] xl:bottom-[-17.15rem] 2xl:right-[2.5rem] 2xl:bottom-[-17.15rem] w-24 md:w-32 lg:w-64 z-20">
-            <img src="hanging-bulbs.png" alt="Hanging Bulbs Image" class="w-full h-auto">
-        </div>
-
-        </section>
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        <!-- Promo Section 
-        <section class="promo-section bg-gray-100 py-12">
-            <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between">
-                <div class="promo-content text-center lg:text-left mb-8 lg:mb-0">
-                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Dine At Your Favorite Places And Pay Using Our App To Get Amazing Discount</h3>
-                    <a href="#" class="promo-button inline-block bg-purple-500 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-600 transition">Get App Now</a>
-                </div>
-                <div class="promo-image relative">
-                    <img src="promo-image.png" alt="Promo" class="w-64 md:w-80 h-auto">
-                    <img src="hanging-image.png" alt="Hanging Image" class="hanging-image absolute -top-10 right-0 w-16 md:w-20 h-auto">
-                </div>
+                <img src="hanging-bulbs.png" alt="Hanging Bulbs Image" class="w-full h-auto">
             </div>
-        </section>
-        -->
 
-        <!-- Mission Section 
-        <section class="mission bg-white py-16">
-            <div class="container mx-auto flex flex-col lg:flex-row items-center">
-                <div class="mission-image mb-8 lg:mb-0 lg:w-1/2">
-                    <img src="mission.png" alt="Mission Image" class="w-full h-auto">
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission bg-white py-12 md:py-20 lg:mt-28 lg:mx-44">
+            <div class="container mx-auto flex flex-col lg:flex-row items-start justify-center">
+                <!-- Image Section (Aligned with Text Content) -->
+                <div class="lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-end lg:mr-0 lg:self-start">
+                    <img src="mission.png" alt="Mission Image" class="w-full max-w-lg">
                 </div>
-                <div class="text-content lg:w-1/2 lg:pl-12 text-center lg:text-left">
-                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">ABOUT FIESTO</h1>
-                    <h2 class="text-xl md:text-2xl font-semibold text-gray-700 mb-4">
-                        <span class="text-purple-500">Fiesto’s</span> Mission & Vision
+
+                <!-- Text Content Section -->
+                <div class="lg:w-1/2 text-center lg:text-left px-4 md:px-6 lg:pl-4 lg:max-w-[80%]">
+                    <h1 class="text-xl md:text-2xl font-semibold text-gray-600 mb-2">ABOUT FIESTO</h1>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                        <span class="text-teal-500">Fiesto’s</span> Mission & Vision
                     </h2>
-                    <p class="text-base md:text-lg text-gray-600 mb-6">
-                        We founded FIESTO to provide the best party experiences for our customers to make their special day unique and unforgettable. We aim to provide good-quality and creative decoration for parties, help our clients in booking the best venue and hire the best party essential services like catering and photography. People can leave their party worries to us to give more time to their loved ones and party hassle-free. Whether it's a small intimate affair or a large-scale party, we make events fun and create great memories for our clients.
+                    <p class="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
+                        We founded FIESTO to provide the best party experiences for our customers to make their special
+                        day unique and unforgettable. We aim to provide good-quality and creative decoration for
+                        parties, help our clients in booking the best venue and hire the best party essential services
+                        like catering and photography. People can leave their party worries to us to give more time to
+                        their loved ones and party hassle-free. Whether it's a small intimate affair or a large-scale
+                        party, we make events fun and create great memories for our clients.
                     </p>
-                    <a href="#" class="learn-more-button inline-block bg-purple-500 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-600 transition">
+                    <a href="#"
+                        class="inline-block bg-teal-500 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-600 transition">
                         Learn More
                     </a>
                 </div>
             </div>
         </section>
-        -->
-        
 
-    </main>    
+        <!--offers section-->
+        <section class="featured-services bg-white py-16">
+            <div class="container mx-auto px-4">
+                <!-- Title Section -->
+                <div class="mb-12 text-center lg:text-left lg:ml-20">
+                    <h3 class="text-lg text-gray-500 uppercase mb-2">Our Offers</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured <span class="text-teal-500">Services</span>
+                        Section</h2>
+                </div>
+
+                <!-- Service Cards -->
+                <div class="space-y-8">
+                    <!-- First Card with Sparkle Image -->
+                    <div class="relative">
+                        <!-- Sparkle Image -->
+                        <div class="absolute top-[-8rem] right-0 lg:right-72 md:right-[-2rem] sm:right-[-1rem]">
+                            <img src="sparkle.png" alt="Sparkle Image" class="w-40 md:w-44 lg:w-48 sm:w-28">
+                        </div>
+
+                        <!-- First Card -->
+                        <div
+                            class="flex flex-col lg:flex-row items-center bg-green-50 p-6 rounded-lg shadow-md mx-4 md:mx-10 lg:ml-20 lg:mr-96 lg:mb-20 mb-10">
+                            <!-- Text Section -->
+                            <div class="lg:flex-1 w-full lg:max-w-[70%] lg:pr-8 text-center lg:text-left">
+                                <h3 class="text-2xl font-semibold mb-4">Venue Booking</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <a href="#"
+                                    class="inline-block bg-teal-500 text-white py-2 px-4 rounded-full hover:bg-purple-600 transition">View
+                                    All</a>
+                            </div>
+
+                            <!-- Image Section -->
+                            <div class="lg:flex-1 w-full mt-6 lg:mt-0 flex justify-center lg:justify-end">
+                                <img src="coupons.png" alt="Venue Booking Image"
+                                    class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="relative">
+                        <!-- abstract Image -->
+                        <div class="absolute top-[-3rem] left-6 md:left-10 lg:left-56">
+                            <img src="abstract.png" alt="abstract Image" class="w-28 sm:w-32 md:w-36 lg:w-40 xl:w-40">
+                        </div>
+
+                        <!-- Second Card -->
+                        <div
+                            class="flex flex-col md:flex-col-reverse sm:flex-col-reverse lg:flex-row items-center bg-red-50 p-6 rounded-lg shadow-md mx-4 md:mx-10 lg:ml-96 lg:mr-20 lg:mb-20">
+                            <!-- Image Section (Reduced Size) -->
+                            <div
+                                class="lg:flex-1 w-full mb-6 lg:mb-0 flex justify-center lg:justify-start md:mt-1 sm:mt-5">
+                                <img src="event.png" alt="Event and Party Services Image"
+                                    class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg">
+                            </div>
+
+                            <!-- Text Section -->
+                            <div class="lg:flex-1 w-full lg:max-w-[70%] lg:pl-8 text-center lg:text-left">
+                                <h3 class="text-2xl font-semibold mb-4">Event & Party Services</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <a href="#"
+                                    class="inline-block bg-teal-500 text-white py-2 px-4 rounded-full hover:bg-purple-600 transition">View
+                                    All</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Third Card -->
+                    <div class="space-y-8">
+                        <div class="relative">
+                            <!-- Spark Image -->
+                            <div class="absolute bottom-[-7rem] right-0 lg:right-72 md:right-[-2rem] sm:right-[-1rem]">
+                                <img src="spark.png" alt="Spark Image" class="w-40 md:w-44 lg:w-48 sm:w-28">
+                            </div>
+
+                            <!-- Third Card -->
+                            <div
+                                class="flex flex-col lg:flex-row items-center bg-purple-50 p-6 rounded-lg shadow-md mx-4 md:mx-10 lg:ml-20 lg:mr-96 lg:mb-20 lg:mt-20">
+                                <!-- Text Section -->
+                                <div class="lg:flex-1 w-full lg:pr-8 text-center lg:text-left">
+                                    <h3 class="text-2xl font-semibold mb-4">Entertainment</h3>
+                                    <p class="text-gray-600 mb-4 leading-relaxed">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <a href="#"
+                                        class="inline-block bg-teal-500 text-white py-2 px-4 rounded-full hover:bg-purple-600 transition">View
+                                        All</a>
+                                </div>
+
+                                <!-- Image Section (Increased Size) -->
+                                <div class="lg:flex-1 w-full mt-6 lg:mt-0 flex justify-center lg:justify-end">
+                                    <img src="entertainment.png" alt="Entertainment Services Image"
+                                        class="w-full md:w-5/6 lg:w-2/3 h-auto rounded-lg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Processes Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
 </body>
+
 </html>
