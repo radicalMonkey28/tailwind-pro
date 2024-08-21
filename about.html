@@ -42,9 +42,9 @@
                     }
                 });
         
-                // If no match found (on homepage), highlight Home link
+                // Default to highlighting the "About Us" link if no other match is found
                 if (!document.querySelector('.nav-link.active')) {
-                    document.getElementById('home-link').classList.add('active');
+                    document.getElementById('about-link').classList.add('active');
                 }
             }
         
@@ -57,71 +57,43 @@
             .active {
                 font-weight: bold;
                 color: #33e5ef; /* Tailwind teal-400 color */
- /* Underline the active link */
+                 /* Underline the active link */
             }
         </style>
+        
         
     </header>
 
     <main>
         <!-- Hero Section -->
         <section class="hero  text-center py-16 relative">
-            <div class="container mx-auto">
-                <h2 class="text-xl md:text-2xl font-semibold text-gray-700 mb-2 relative z-10">MEMORY PLANNER</h2>
+            <div class="container mx-auto lg:mt-10">
+                <h2 class="text-xl md:text-2xl font-semibold text-gray-700 mb-2 relative z-10">ABOUT US</h2>
                 <h1 class="text-3xl md:text-5xl font-bold text-black mb-2 relative z-10">
-                    Professional <span class="text-teal-500">Planner</span> For Successful
+                    About <span class="text-teal-500">Fiesto</span>
                 </h1>
-                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 relative z-10">Events</h1>
                 <p class="text-base md:text-lg text-gray-600 mt-4 relative z-10">Elevate Your Event Experience with Our
                     Professional Planning Services</p>
                 <p class="text-base md:text-lg text-gray-600 relative z-10">and create unforgettable memories</p>
 
-                <div class="app-buttons flex justify-center space-x-4 mt-6 relative z-10">
+                <div class="app-buttons flex justify-center space-x-4 mt-10 relative z-10">
                     <a href="#">
-                        <img src="appstore.png" alt="Available on the App Store" class="h-12 md:h-16 w-auto">
+                        <img src="appstore.png" alt="Available on the App Store" class="h-12 md:h-12 w-auto">
                     </a>
                     <a href="#">
-                        <img src="googleplay.png" alt="Get it on Google Play" class="h-12 md:h-16 w-auto">
+                        <img src="googleplay.png" alt="Get it on Google Play" class="h-12 md:h-12 w-auto">
                     </a>
                 </div>
 
                 <!-- Aligning images with MEMORY PLANNER heading -->
-                <img class="hero-image left absolute left-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0"
+                <img class="hero-image lg:mt-20 left absolute left-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0"
                     src="left-image.png" alt="Left Decoration">
-                <img class="hero-image right absolute right-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0"
+                <img class="hero-image lg:mt-20 right absolute right-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0"
                     src="right-image.png" alt="Right Decoration">
             </div>
         </section>
 
-        <!-- Promo Section -->
-        <section class="promo-section bg-purple-100 rounded-xl p-8 mx-auto max-w-6xl my-12 relative overflow-visible">
-            <div class="flex flex-col lg:flex-row items-center justify-between relative z-10">
-                <!-- Text Section -->
-                <div class="text-center lg:text-left mb-8 lg:mb-0 lg:w-1/2">
-                    <h3 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
-                        Dine At Your Favorite Places And Pay Using Our App To Get Amazing Discount
-                    </h3>
-                    <a href="#"
-                        class="inline-block bg-teal-500 text-white font-bold py-3 px-6 rounded-full hover:bg-teal-600 transition">
-                        Get App Now
-                    </a>
-                </div>
-
-                <!-- Image Section -->
-                <div class="lg:w-1/2 flex justify-center lg:justify-end relative">
-                    <img src="promo-image.png" alt="Promo Image" class="w-full max-w-sm h-auto">
-                </div>
-            </div>
-
-            <!-- Hanging Bulbs Positioned at the Bottom Right Inside the Purple Background -->
-            <div class="absolute bottom-[-6.5rem] right-[1rem] sm:right-[1.5rem] sm:bottom-[-6.51rem] 
-            md:right-[2rem] md:bottom-[-8.57rem] lg:right-[2rem] lg:bottom-[-17.15rem] 
-            xl:right-[2rem] xl:bottom-[-17.15rem] 2xl:right-[2.5rem] 2xl:bottom-[-17.15rem] w-24 md:w-32 lg:w-64 z-20">
-                <img src="hanging-bulbs.png" alt="Hanging Bulbs Image" class="w-full h-auto">
-            </div>
-
-        </section>
-
+        
         <!-- Mission Section -->
         <section class="mission bg-white py-12 md:py-20 lg:mt-28 lg:mx-44">
             <div class="container mx-auto flex flex-col lg:flex-row items-start justify-center">
@@ -152,118 +124,51 @@
             </div>
         </section>
 
-        <!--offers section-->
-        <section class="featured-services bg-white py-16">
-            <div class="container mx-auto px-4">
-                <!-- Title Section -->
-                <div class="mb-12 text-center lg:text-left lg:ml-20">
-                    <h3 class="text-lg text-gray-500 uppercase mb-2">Our Offers</h3>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured <span class="text-teal-500">Services</span>
-                        Section</h2>
-                </div>
-
-                <!-- Service Cards -->
-                <div class="space-y-8">
-                    <!-- First Card with Sparkle Image -->
-                    <div class="relative">
-                        <!-- Sparkle Image -->
-                        <div class="absolute top-[-8rem] right-0 lg:right-72 md:right-[-2rem] sm:right-[-1rem]">
-                            <img src="sparkle.png" alt="Sparkle Image" class="w-40 md:w-44 lg:w-48 sm:w-28">
-                        </div>
-
-                        <!-- First Card -->
-                        <div
-                            class="flex flex-col lg:flex-row items-center bg-green-50 p-6 rounded-lg shadow-md mx-4 md:mx-10 lg:ml-20 lg:mr-96 lg:mb-20 mb-10">
-                            <!-- Text Section -->
-                            <div class="lg:flex-1 w-full lg:max-w-[70%] lg:pr-8 text-center lg:text-left">
-                                <h3 class="text-2xl font-semibold mb-4">Venue Booking</h3>
-                                <p class="text-gray-600 mb-4 leading-relaxed">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <a href="#"
-                                    class="inline-block bg-teal-500 text-white py-2 px-4 rounded-full hover:bg-purple-600 transition">View
-                                    All</a>
-                            </div>
-
-                            <!-- Image Section -->
-                            <div class="lg:flex-1 w-full mt-6 lg:mt-0 flex justify-center lg:justify-end">
-                                <img src="coupons.png" alt="Venue Booking Image"
-                                    class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg">
-                            </div>
-                        </div>
-                    </div>
+        <!--Excellence section-->
+<!-- Excellence Section (With Gaps Between Cards in Desktop View) -->
+<section class="py-16 bg-white text-center">
+    <h6 class="text-gray-500 uppercase text-sm tracking-widest mb-4">EXCELLENCE</h6>
+    <h2 class="text-3xl font-bold mb-8">Why Choose <span class="text-teal-500">Fiesto’s</span></h2>
+    
+    <!-- Flexbox with gaps in desktop view -->
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 lg:space-x-10"> 
+        <!-- First Card -->
+        <div class="bg-red-100 p-6 rounded-lg shadow-lg w-full md:w-64 text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+            <span class="inline-block mb-4">
+                <img src="lock.png" alt="Secure & Trusted Icon" class="h-12 w-12 mx-auto">
+            </span>
+            <h3 class="text-xl font-semibold mb-4">Secure & Trusted</h3>
+            <p class="text-gray-600 mb-4">Elit esse cillum dolore eu fugiat nulla pariatur</p>
+            <a href="#" class="text-teal-500 hover:text-teal-700 text-xl">→</a>
+        </div>
+        
+        <!-- Second Card -->
+        <div class="bg-teal-100 p-6 rounded-lg shadow-lg w-full md:w-64 text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+            <span class="inline-block mb-4">
+                <img src="set.png" alt="Easy Customizable Icon" class="h-12 w-12 mx-auto">
+            </span>
+            <h3 class="text-xl font-semibold mb-4">Easy Customizable</h3>
+            <p class="text-gray-600 mb-4">Quis nostrud exercit ullamco ea nisi ut aliquip com dolor</p>
+            <a href="#" class="text-teal-500 hover:text-teal-700 text-xl">→</a>
+        </div>
+        
+        <!-- Third Card -->
+        <div class="bg-purple-100 p-6 rounded-lg shadow-lg w-full md:w-64 text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+            <span class="inline-block mb-4">
+                <img src="chat.png" alt="Affordable Icon" class="h-12 w-12 mx-auto">
+            </span>
+            <h3 class="text-xl font-semibold mb-4">Affordable</h3>
+            <p class="text-gray-600 mb-4">Duis aute irure dolor reprehenderit in voluptate</p>
+            <a href="#" class="text-teal-500 hover:text-teal-700 text-xl">→</a>
+        </div>
+    </div>
+</section>
 
 
 
 
-                    <div class="relative">
-                        <!-- abstract Image -->
-                        <div class="absolute top-[-3rem] left-6 md:left-10 lg:left-56">
-                            <img src="abstract.png" alt="abstract Image" class="w-28 sm:w-32 md:w-36 lg:w-40 xl:w-40">
-                        </div>
-
-                        <!-- Second Card -->
-                        <div
-                            class="flex flex-col md:flex-col-reverse sm:flex-col-reverse lg:flex-row items-center bg-red-50 p-6 rounded-lg shadow-md mx-4 md:mx-10 lg:ml-96 lg:mr-20 lg:mb-20">
-                            <!-- Image Section (Reduced Size) -->
-                            <div
-                                class="lg:flex-1 w-full mb-6 lg:mb-0 flex justify-center lg:justify-start md:mt-1 sm:mt-5">
-                                <img src="event.png" alt="Event and Party Services Image"
-                                    class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg">
-                            </div>
-
-                            <!-- Text Section -->
-                            <div class="lg:flex-1 w-full lg:max-w-[70%] lg:pl-8 text-center lg:text-left">
-                                <h3 class="text-2xl font-semibold mb-4">Event & Party Services</h3>
-                                <p class="text-gray-600 mb-4 leading-relaxed">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <a href="#"
-                                    class="inline-block bg-teal-500 text-white py-2 px-4 rounded-full hover:bg-purple-600 transition">View
-                                    All</a>
-                            </div>
-                        </div>
-                    </div>
 
 
-                    <!-- Third Card -->
-                    <div class="space-y-8">
-                        <div class="relative">
-                            <!-- Spark Image -->
-                            <div class="absolute bottom-[-7rem] right-0 lg:right-72 md:right-[-2rem] sm:right-[-1rem]">
-                                <img src="spark.png" alt="Spark Image" class="w-40 md:w-44 lg:w-48 sm:w-28">
-                            </div>
-
-                            <!-- Third Card -->
-                            <div
-                                class="flex flex-col lg:flex-row items-center bg-purple-50 p-6 rounded-lg shadow-md mx-4 md:mx-10 lg:ml-20 lg:mr-96 lg:mb-20 lg:mt-20">
-                                <!-- Text Section -->
-                                <div class="lg:flex-1 w-full lg:pr-8 text-center lg:text-left">
-                                    <h3 class="text-2xl font-semibold mb-4">Entertainment</h3>
-                                    <p class="text-gray-600 mb-4 leading-relaxed">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                    <a href="#"
-                                        class="inline-block bg-teal-500 text-white py-2 px-4 rounded-full hover:bg-purple-600 transition">View
-                                        All</a>
-                                </div>
-
-                                <!-- Image Section (Increased Size) -->
-                                <div class="lg:flex-1 w-full mt-6 lg:mt-0 flex justify-center lg:justify-end">
-                                    <img src="entertainment.png" alt="Entertainment Services Image"
-                                        class="w-full md:w-5/6 lg:w-2/3 h-auto rounded-lg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            </div>
-        </section>
 
         <!-- Processes Section -->
         <section class="bg-pink-50 py-16 rounded-lg mx-4 lg:mx-20 mb-16">
