@@ -1,31 +1,3 @@
-<!-- Excellence Section (newly added) -->
-<section class="excellence">
-    <h6>EXCELLENCE</h6>
-    <h2>Why Choose <span>Fiesto’s</span></h2>
-    <div class="excellence-cards">
-        <div class="excellence-card" style="background-color: #F9EDEE;">
-            <span class="icon">
-                <img src="lock.png" alt="Secure & Trusted Icon">
-            </span>
-            <h3>Secure & Trusted</h3>
-            <p>Elit esse cillum dolore eu fugiat nulla pariatur</p>
-            <a href="#">→</a>
-        </div>
-        <div class="excellence-card" style="background-color: #E0F8F8;">
-            <span class="icon">
-                <img src="set.png" alt="Easy Customizable Icon">
-            </span>
-            <h3>Easy Customizable</h3>
-            <p>Quis nostrud exercit ullamco ea nisi ut aliquip com dolor</p>
-            <a href="#">→</a>
-        </div>
-        <div class="excellence-card" style="background-color: #F7EDFF;">
-            <span class="icon">
-                <img src="chat.png" alt="Affordable Icon">
-            </span>
-            <h3>Affordable</h3>
-            <p>Duis aute irure dolor reprehenderit in voluptate velit</p>
-            <a href="#">→</a>
-        </div>
-    </div>
-</section>
+'Montserrat', sans-serif                 (title)
+
+'Cormorant Garamond', serif                 (content)
