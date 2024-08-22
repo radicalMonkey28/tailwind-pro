@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="flex justify-between items-center p-4 bg-black text-white">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="h-10 md:h-12 w-auto">
+        </div>
+        <nav>
+            <!-- Hamburger Icon for smaller screens -->
+            <div class="hamburger cursor-pointer text-3xl lg:hidden" id="hamburger">
+                &#9776;
+            </div>
+        
+            <!-- Navigation Links -->
+            <ul id="nav-links" class="hidden lg:flex flex-col lg:flex-row lg:space-x-6 mt-4 lg:mt-0 text-lg">
+                <li><a href="index.html" id="home-link" class="nav-link text-white hover:text-teal-400 block lg:inline-block">Home</a></li>
+                <li><a href="services.html" id="services-link" class="nav-link text-white hover:text-teal-400 block lg:inline-block">Services</a></li>
+                <li><a href="about.html" id="about-link" class="nav-link text-white hover:text-teal-400 block lg:inline-block">About Us</a></li>
+                <li><a href="contact.html" id="contact-link" class="nav-link text-white hover:text-teal-400 block lg:inline-block">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <!-- JavaScript to handle active class based on URL -->
+        <script>
+            // Function to highlight the active link based on the URL
+            function setActiveLink() {
+                const path = window.location.pathname; // Get the current page URL path
+                const navLinks = document.querySelectorAll('.nav-link');
+        
+                navLinks.forEach(link => {
+                    link.classList.remove('active'); // Remove the active class from all links
+                    if (link.getAttribute('href') === path) {
+                        link.classList.add('active'); // Add the active class to the matching link
+                    }
+                });
+        
+                // Explicitly highlight 'Services' instead of 'Home'
+                if (!document.querySelector('.nav-link.active')) {
+                    document.getElementById('services-link').classList.add('active');
+                }
+            }
+        
+            // Run the function when the page loads
+            window.onload = setActiveLink;
+        </script>
+        
+        
+        <!-- CSS Styles for Active Link -->
+        <style>
+            .active {
+                font-weight: bold;
+                color: #33e5ef; /* Tailwind teal-400 color */
+ /* Underline the active link */
+            }
+        </style>
+        
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero  text-center py-16 relative">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl font-semibold text-gray-700 mb-2 relative z-10">SERVICES</h2>
+                <h1 class="text-3xl md:text-5xl font-bold text-black mb-2 relative z-10">
+                     Services we offer at <span class="text-teal-500">Fiesto</span>
+                </h1>
+                <p class="text-base md:text-lg text-gray-600 mt-4 relative z-10">Elevate Your  Event Experience with Our Professional Planning Services </p>
+                <p class="text-base md:text-lg text-gray-600 relative z-10">and create unforgettable memories</p>
+
+                <div class="app-buttons flex justify-center space-x-4 mt-6 relative z-10">
+                    <a href="#">
+                        <img src="appstore.png" alt="Available on the App Store" class="h-12 md:h-16 w-auto">
+                    </a>
+                    <a href="#">
+                        <img src="googleplay.png" alt="Get it on Google Play" class="h-12 md:h-16 w-auto">
+                    </a>
+                </div>
+
+                <!-- Aligning images with MEMORY PLANNER heading -->
+                <img class="hero-image left absolute left-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0"
+                    src="left-image.png" alt="Left Decoration">
+                <img class="hero-image right absolute right-0 top-0 transform translate-y-10 md:translate-y-20 h-32 md:h-48 lg:h-56 z-0"
+                    src="right-image.png" alt="Right Decoration">
+            </div>
+        </section>
+
+
+
+
+<!-- Tailwind CSS and JavaScript for Tabs Section -->
+<section class="py-16 bg-white text-center">
+    <!-- Tab Buttons -->
+    <div class="flex flex-wrap justify-center space-x-4 sm:space-x-6 md:space-x-12 mb-8">
+        <button id="venue-tab" class="tab-btn border-teal-500 pb-2 text-lg font-semibold text-teal-500 focus:outline-none" onclick="showContent('venue')">Venue Booking</button>
+        <button id="party-tab" class="tab-btn pb-2 text-lg font-semibold focus:outline-none hover:text-teal-500" onclick="showContent('party')">Event & Party Services</button>
+        <button id="entertainment-tab" class="tab-btn pb-2 text-lg font-semibold focus:outline-none hover:text-teal-500" onclick="showContent('entertainment')">Entertainment</button>
+    </div>
+
+    <!-- Content for Venue Booking -->
+    <div id="venue-content" class="tab-content">
+        <div class="flex flex-wrap justify-center items-center space-x-4 sm:space-x-6 mb-8">
+            <div class="flex flex-col items-center">
+                <img src="venue-cafe.jpg" alt="Cafe" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Cafe</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="venue-outdoor.jpg" alt="Outdoor" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Outdoor</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="venue-resort.jpg" alt="Resort" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Resort</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="venue-farmhouse.jpg" alt="Farmhouse" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Farmhouse</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="venue-clubs.jpg" alt="Clubs" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Clubs</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="venue-villas.jpg" alt="Villas" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Villas</p>
+            </div>
+        </div>
+
+        <div class="text-left max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold">Make Your <span class="text-teal-500">Reservation</span></h2>
+            <p class="text-gray-600 mb-4">Experience the ultimate in savings and culinary delight by reserving with us now! Enjoy an exclusive discount and treat yourself to an unforgettable dining experience at one of our esteemed partner restaurants.</p>
+            <div class="bg-green-100 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold">Cafe</h3>
+                    <p class="text-gray-600">You can also describe how your restaurant will differ from other food establishments in the industry. Do not forget about your target and financial highlights.</p>
+                    <button class="mt-4 bg-teal-500 text-white px-6 py-2 rounded-full hover:bg-teal-600">Book Now</button>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="coupons.png" alt="Coupons Image" class="rounded-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content for Event & Party Services -->
+    <div id="party-content" class="tab-content hidden">
+        <div class="flex flex-wrap justify-center items-center space-x-4 sm:space-x-6 mb-8">
+            <div class="flex flex-col items-center">
+                <img src="party-theme.jpg" alt="Theme Decor" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Theme Decor</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="party-customize.jpg" alt="Customize Decor" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Customize Decor</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="party-neon.jpg" alt="Neon Light" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Neon Light</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="party-bouquet.jpg" alt="Bouquet" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Bouquet</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="party-cake.jpg" alt="Cake" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Cake</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="party-anniversary.jpg" alt="Anniversary" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Anniversary</p>
+            </div>
+        </div>
+
+        <div class="text-left max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold">Event & Party <span class="text-teal-500">Services</span></h2>
+            <p class="text-gray-600 mb-4">Transform your event with our theme decor services! Elevate the ambiance and create lasting memories with our expertly crafted themes tailored to your unique vision.</p>
+            <div class="bg-green-100 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold">Theme Decor</h3>
+                    <p class="text-gray-600">Transform your event with our theme decor services! Elevate the ambiance and create lasting memories with our expertly crafted themes tailored to your unique vision.</p>
+                    <button class="mt-4 bg-teal-500 text-white px-6 py-2 rounded-full hover:bg-teal-600">Book Now</button>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="entertainment.png" alt="Theme Decor Image" class="rounded-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content for Entertainment -->
+    <div id="entertainment-content" class="tab-content hidden">
+        <div class="flex flex-wrap justify-center items-center space-x-4 sm:space-x-6 mb-8">
+            <div class="flex flex-col items-center">
+                <img src="entertain-photographer.jpg" alt="Photographer" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Photographer</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="entertain-guitarist.jpg" alt="Guitarist" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Guitarist</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="entertain-magician.jpg" alt="Magicians" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Magicians</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="entertain-singers.jpg" alt="Singers" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Singers</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="entertain-dancers.jpg" alt="Dancers" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Dancers</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="entertain-anchors.jpg" alt="Anchors" class="rounded-full h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24">
+                <p class="mt-2">Anchors</p>
+            </div>
+        </div>
+
+        <div class="text-left max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold">Fiesto’s <span class="text-teal-500">Entertainment</span></h2>
+            <p class="text-gray-600 mb-4">Experience the ultimate in entertainment services, from photographers to magicians and more, tailored for unforgettable moments.</p>
+            <div class="bg-green-100 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold">Photographer</h3>
+                    <p class="text-gray-600">Capture every moment with our professional photographers who will ensure your event is remembered forever.</p>
+                    <button class="mt-4 bg-teal-500 text-white px-6 py-2 rounded-full hover:bg-teal-600">Book Now</button>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="photographer.png" alt="Photographer Image" class="rounded-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript to toggle between the tabs -->
+<script>
+    function showContent(tab) {
+        // Hide all content sections
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.add('hidden');
+        });
+
+        // Remove active class from all tabs
+        document.querySelectorAll('.tab-btn').forEach(tabBtn => {
+            tabBtn.classList.remove('text-teal-500', 'border-teal-500');
+        });
+
+        // Show the selected content
+        document.getElementById(`${tab}-content`).classList.remove('hidden');
+
+        // Add active class to the clicked tab
+        document.getElementById(`${tab}-tab`).classList.add('text-teal-500', 'border-teal-500');
+    }
+
+    // By default, show the "Venue Booking" content
+    showContent('venue');
+</script>
+
+  
+  <script>
+    function showContent(contentId) {
+      const tabs = ['venue', 'party', 'entertainment'];
+      tabs.forEach(tab => {
+        document.getElementById(`${tab}-content`).classList.add('hidden');
+        document.getElementById(`${tab}-tab`).classList.remove('border-teal-500', 'text-teal-500');
+      });
+      document.getElementById(`${contentId}-content`).classList.remove('hidden');
+      document.getElementById(`${contentId}-tab`).classList.add('border-teal-500', 'text-teal-500');
+    }
+  </script>
+  
+
+
+
+
+
+
+
+
+
+                <!-- Processes Section -->
+        <section class="bg-pink-50 py-16 rounded-lg mx-4 lg:mx-20 mb-16">
+            <div class="container mx-auto px-4">
+                
+                        <!-- Section Title -->
+                        <div class="text-center mb-10">
+                            <h3 class="text-gray-500 text-sm uppercase tracking-widest  mt-5">Our Process</h3>
+                            <h2 class="text-3xl md:text-4xl mt-10 font-semibold text-gray-800 leading-tight">
+                                Makes It Easy To <span class="text-teal-500 mt-10">Create</span><br> <!-- This breaks the line -->
+                                Your Memories.
+                            </h2>
+                        </div>
+                
+                        <!-- Process Steps -->
+                        <div class="flex flex-col mt-10 md:flex-row justify-center items-start space-y-12 md:space-y-0 md:space-x-12 text-center">
+                            <!-- Step 1 -->
+                            <div class="md:w-1/3 flex flex-col items-center space-y-4">
+                                <img src="get-app-icon.png" alt="Get Our App Icon" class="w-12 h-12 mb-4">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Get our app</h4>
+                                <p class="text-gray-600">Choose Our Consultation for any celebration and we will make it special.</p>
+                            </div>
+                
+                            <!-- Step 2 -->
+                            <div class="md:w-1/3 flex flex-col items-center space-y-4">
+                                <img src="pick-services-icon.png" alt="Pick the Services Icon" class="w-12 h-12 mb-4">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Pick the services</h4>
+                                <p class="text-gray-600">Tell us about your preferences and our team is there to plan it for you.</p>
+                            </div>
+                
+                            <!-- Step 3 -->
+                            <div class="md:w-1/3 flex flex-col items-center space-y-4">
+                                <img src="enjoy-services-icon.png" alt="Enjoy Our Services Icon" class="w-12 h-12 mb-4">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Enjoy our services</h4>
+                                <p class="text-gray-600">As soon as we are done with planning we do end to end execution.</p>
+                            </div>
+                        </div>
+            </div>
+        </section>
+
+<!--Memory wall section-->
+<section class="memory-wall py-16 bg-white relative overflow-hidden">
+    <div class="container mx-auto lg:w-10/12 lg:ml-64 px-4 flex flex-col lg:flex-row items-center lg:items-start">
+        <!-- Single Image Section -->
+        <div class="lg:w-1/3 mb-12 lg:mb-0 flex justify-center lg:justify-start">
+            <img src="gallery.png" alt="Gallery Image" class="w-full sm:w-3/4 md:w-2/3 lg:w-full h-auto rounded-lg">
+        </div>
+
+        <!-- Text Content Section -->
+        <div class="lg:w-1/2 lg:pl-12 text-center lg:text-left">
+            <h3 class="text-sm uppercase text-gray-500 tracking-widest mb-2">Memory Wall</h3>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Explore Our <span class="text-teal-500">Gallery</span>
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Welcome to our Memory Wall, where every event becomes a cherished chapter in our storybook of celebrations. Here, amidst the whispers of laughter and echoes of joy, we invite you to relive the magic of past events captured in fleeting moments frozen in time.
+                <br><br>
+                Each photograph, each anecdote, each shared memory is a testament to the love and care woven into every detail of our meticulously planned gatherings. Let these snapshots transport you back to the warmth of heartfelt conversations, the thrill of shared experiences, and the beauty of connections made.
+                <br><br>
+                Join us in commemorating these precious memories and be inspired to create your own unforgettable moments with us.
+            </p>
+            <a href="#" class="inline-block bg-teal-500 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-600 transition">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Munchies Image Positioned to Prevent Overflow -->
+    <div class="absolute bottom-2 right-0 lg:right-0">
+        <img src="munchies.png" alt="Munchies Image" class="w-32 md:w-28 lg:w-44">
+    </div>
+</section>
+
+        
+        <!-- Testimonial Section -->
+        
+        <section class="testimonial-section py-16 bg-white mt-16 mx-6 lg:mx-16">
+            <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12">
+                <!-- Text Content Section -->
+                <div class="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 max-w-3xl mx-auto">
+                    <h3 class="text-sm uppercase text-gray-500 tracking-widest mb-2">Testimonial</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Happy <span class="text-teal-500">Customers</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Fiesto's dedicated team ensures seamless party planning from start to finish. Trust us to bring your vision to life and create unforgettable moments. Let's make your next event extraordinary. Experience our personalized service and attention to detail. Let us take the stress out of party planning so you can relax and enjoy the celebration!
+                    </p>
+                    <a href="#" class="inline-block bg-teal-500 text-white font-bold py-4 px-8 rounded-full hover:bg-purple-600 transition">Contact Now</a>
+                </div>
+        
+                <!-- Carousel Section with Teal Background -->
+                <div class="lg:w-1/2 bg-green-50 p-8 lg:p-12 rounded-lg">
+                    <div id="testimonialCarousel" class="relative w-full">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-item p-4 md:p-6 lg:p-8 bg-white rounded-lg shadow-lg w-[90%] mx-auto lg:w-full" id="slide1">
+                            <div class="flex items-center mb-4">
+                                <img src="leslie.jpg" alt="Leslie Alexander" class="w-12 h-12 md:w-16 md:h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold text-lg md:text-xl text-blue-900">Leslie Alexander</h4>
+                                    <p class="text-sm text-gray-500">Student</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4 text-sm md:text-lg">
+                                "Effortlessly planned my dream party with their expert team! From venue to decorations, every detail was perfect. Highly recommend for stress-free event planning!"
+                            </p>
+                            <div class="flex items-center">
+                                <span class="text-yellow-400 text-xl">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            </div>
+                        </div>
+        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-item p-4 md:p-6 lg:p-8 bg-white rounded-lg shadow-lg w-[90%] mx-auto lg:w-full hidden" id="slide2">
+                            <div class="flex items-center mb-4">
+                                <img src="john.jpg" alt="John Doe" class="w-12 h-12 md:w-16 md:h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold text-lg md:text-xl text-blue-900">John Doe</h4>
+                                    <p class="text-sm text-gray-500">Designer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4 text-sm md:text-lg">
+                                "Fiesto transformed our party into a magical experience! Their attention to detail and creativity made it unforgettable. They truly care about every aspect of the event."
+                            </p>
+                            <div class="flex items-center">
+                                <span class="text-yellow-400 text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </div>
+                        </div>
+        
+                        <!-- Carousel Controls -->
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                            <button id="nextSlide" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                                &#9654;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- JavaScript code for smooth carousel -->
+        <script>
+            let currentSlide = 1;
+            const totalSlides = 2;
+            const slideDuration = 3000;
+        
+            function showNextSlide() {
+                document.getElementById(`slide${currentSlide}`).classList.add('hidden');
+                currentSlide = (currentSlide % totalSlides) + 1;
+                document.getElementById(`slide${currentSlide}`).classList.remove('hidden');
+            }
+        
+            // Auto-slide every 3 seconds
+            setInterval(showNextSlide, slideDuration);
+        
+            // Manual control for next slide
+            document.getElementById('nextSlide').addEventListener('click', showNextSlide);
+        </script>
+
+
+
+
+
+
+        <!--FAQ section-->
+        <section class="faq-section py-16 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-4 text-center">
+            <!-- Music Icon Image -->
+            <div class="flex justify-center mb-4">
+                <img src="music.png" alt="Music Icon" class="w-10 h-auto md:w-12 lg:w-14">
+            </div>
+              <!-- FAQ Header -->
+              <div class="mb-8">
+                <h3 class="text-sm uppercase text-gray-500 tracking-widest mb-2">FAQ</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Frequently Asked <span class="text-teal-500">Questions</span>
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                  "Got questions? We've got answers! Explore our FAQs for quick solutions and <br>
+                  information. Your journey starts here."
+                </p>
+              </div>
+          
+              <!-- Accordion Section -->
+              <div class="faq-accordion space-y-4 text-left max-w-4xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-300 rounded-lg p-4 cursor-pointer hover:bg-gray-100 transition" onclick="toggleFAQ(1)">
+                  <div class="flex justify-between items-center">
+                    <h4 class="font-semibold text-lg">1. What is Fiesto?</h4>
+                    <span class="text-xl" id="icon1">+</span>
+                  </div>
+                  <div class="hidden mt-4 bg-blue-100 p-4 rounded-lg" id="content1">
+                    <p class="text-gray-800">
+                      Fiesto is a premier event planning service that provides customized event solutions to ensure memorable celebrations.
+                    </p>
+                  </div>
+                </div>
+          
+                <!-- FAQ 2 -->
+                <div class="border border-gray-300 rounded-lg p-4 cursor-pointer hover:bg-gray-100 transition" onclick="toggleFAQ(2)">
+                  <div class="flex justify-between items-center">
+                    <h4 class="font-semibold text-lg">2. How can I contact Fiesto?</h4>
+                    <span class="text-xl" id="icon2">+</span>
+                  </div>
+                  <div class="hidden mt-4 bg-blue-100 p-4 rounded-lg" id="content2">
+                    <p class="text-gray-800">
+                      You can contact Fiesto through our website's contact form, by email, or by phone. We're here to assist you!
+                    </p>
+                  </div>
+                </div>
+          
+                <!-- FAQ 3 -->
+                <div class="border border-gray-300 rounded-lg p-4 cursor-pointer hover:bg-gray-100 transition" onclick="toggleFAQ(3)">
+                  <div class="flex justify-between items-center">
+                    <h4 class="font-semibold text-lg">3. Do you provide customized event planning packages?</h4>
+                    <span class="text-xl" id="icon3">+</span>
+                  </div>
+                  <div class="hidden mt-4 bg-blue-100 p-4 rounded-lg" id="content3">
+                    <p class="text-gray-800">
+                      Yes, we tailor our services to meet your specific needs and budget. Let us know your requirements, and we’ll create a personalized package for you.
+                    </p>
+                  </div>
+                </div>
+          
+                <!-- FAQ 4 -->
+                <div class="border border-gray-300 rounded-lg p-4 cursor-pointer hover:bg-gray-100 transition" onclick="toggleFAQ(4)">
+                  <div class="flex justify-between items-center">
+                    <h4 class="font-semibold text-lg">4. Do you offer vendor recommendations or can I bring my own?</h4>
+                    <span class="text-xl" id="icon4">+</span>
+                  </div>
+                  <div class="hidden mt-4 bg-blue-100 p-4 rounded-lg" id="content4">
+                    <p class="text-gray-800">
+                      We offer vendor recommendations, but you're welcome to bring your own vendors as well.
+                    </p>
+                  </div>
+                </div>
+          
+                <!-- FAQ 5 -->
+                <div class="border border-gray-300 rounded-lg p-4 cursor-pointer hover:bg-gray-100 transition" onclick="toggleFAQ(5)">
+                  <div class="flex justify-between items-center">
+                    <h4 class="font-semibold text-lg">5. How far in advance should I book your services?</h4>
+                    <span class="text-xl" id="icon5">+</span>
+                  </div>
+                  <div class="hidden mt-4 bg-blue-100 p-4 rounded-lg" id="content5">
+                    <p class="text-gray-800">
+                      We recommend booking our services at least 3-6 months in advance for the best availability and planning.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- JavaScript for Accordion functionality -->
+          <script>
+            function toggleFAQ(faqNumber) {
+              const content = document.getElementById(`content${faqNumber}`);
+              const icon = document.getElementById(`icon${faqNumber}`);
+          
+              if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.innerHTML = '-';
+              } else {
+                content.classList.add('hidden');
+                icon.innerHTML = '+';
+              }
+            }
+          </script>
+                              
+
+            <!--Contact us section-->
+            <section class="relative py-16 bg-white">
+                <!-- Purple Image (Background Decoration) -->
+                <div class="absolute top-[-120px] sm:top-[-100px] md:top-[-150px] lg:top-[-180px] bottom-[-50px] left-0 w-40 h-[300px] sm:w-48 sm:h-[300px] md:w-56 md:h-[450px] lg:w-60 lg:h-[450px]">
+                    <img src="purple-image.png" alt="Purple Decoration" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Contact Us Section -->
+                <div class="container mx-auto px-4 lg:flex lg:items-center lg:justify-between lg:mt-10">
+                    <!-- Text Content / Contact Form -->
+                    <div class="lg:w-1/3 mb-12 lg:mb-0 text-center lg:text-left lg:ml-80">
+                        <h3 class="text-sm uppercase text-gray-500 tracking-widest mb-2">Contact Us</h3>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Get In <span class="text-teal-500">Touch</span>
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Leave an inquiry or contact us via email and phone. We will contact you within 24 hours during work days.
+                        </p>
+
+                        <!-- Contact Form (Reduced Size) -->
+                        <form class="space-y-4 w-4/5 lg:w-full mx-auto">
+                            <input type="text" placeholder="Name*" class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+                            <input type="email" placeholder="Email" class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+                            <input type="tel" placeholder="Phone number*" class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+                            <textarea placeholder="Message" class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                            <button type="submit" class="w-full py-4 bg-teal-500 text-white font-bold rounded-full hover:bg-purple-600 transition">
+                                SEND
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Illustration Image (No Change) -->
+                    <div class="lg:w-2/5 flex justify-center lg:justify-end">
+                        <img src="contact-illustration.png" alt="Illustration" class="w-full h-auto">
+                    </div>
+                </div>
+            </section>
+
+            
+<!-- Footer Section -->
+<footer class="bg-black text-white py-12 md:py-20"> <!-- Reduced padding for smaller screens -->
+    <div class="container mx-auto px-4 lg:flex lg:justify-between lg:items-start space-y-12 lg:space-y-0">
+        
+        <!-- Left Section: Logo and Footer Links -->
+        <div class="lg:w-1/4 space-y-4 flex flex-col items-center lg:items-start"> <!-- Centered flex direction -->
+
+            <!-- Logo -->
+            <div class="mb-6 ml-6 lg:ml-14"> <!-- Slight margin shift for the logo -->
+                <img src="fiesto.png" alt="Fiesto Logo" class="h-20 lg:h-24"> <!-- Smaller size for mobile, larger for desktop -->
+            </div>
+
+            <!-- Footer Links -->
+            <div>
+                <ul class="space-y-2 text-center lg:ml-28 lg:text-left"> <!-- Center aligned for small, left for lg -->
+                    <li><a href="#" class="text-gray-400 hover:text-teal-500 transition">Home</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-teal-500 transition">Services</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-teal-500 transition">About Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-teal-500 transition">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-teal-500 transition">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-teal-500 transition">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Middle Section: Reach Us -->
+        <div class="lg:w-1/3 space-y-4 lg:pt-36 text-center lg:text-left"> <!-- Added text-center for small screens -->
+            <h3 class="text-lg font-semibold">Reach us</h3>
+            <ul class="space-y-4">
+                <li class="flex items-center justify-center lg:justify-start space-x-3"> <!-- Center on small screens -->
+                    <img src="phone-icon.png" alt="Phone" class="h-5 w-5">
+                    <span class="text-gray-400">+1012 3456 789</span>
+                </li>
+                <li class="flex items-center justify-center lg:justify-start space-x-3"> <!-- Center on small screens -->
+                    <img src="email-icon.png" alt="Email" class="h-5 w-5">
+                    <span class="text-gray-400">demo@gmail.com</span>
+                </li>
+                <li class="flex items-center justify-center lg:justify-start space-x-3"> <!-- Center on small screens -->
+                    <img src="location-icon.png" alt="Location" class="h-5 w-5">
+                    <span class="text-gray-400 text-center lg:text-left">132 Dartmouth Street Boston, <br> Massachusetts 02156 United States</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Section: Social Links and CTA -->
+        <div class="lg:w-1/3 space-y-6 text-center lg:text-left lg:pt-20"> <!-- Center text on smaller screens -->
+            <!-- Social Links -->
+            <div class="flex justify-center lg:justify-start space-x-4"> <!-- Centered for small, right for lg -->
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" class="h-6 w-6 lg:h-10 lg:w-6"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram" class="h-6 w-6 lg:h-10 lg:w-6"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter" class="h-6 w-6 lg:h-10 lg:w-6"></a>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook" class="h-6 w-6 lg:h-10 lg:w-6"></a>
+            </div>
+
+            <!-- CTA and Message -->
+            <h2 class="text-2xl font-bold">Do you have any questions?</h2>
+            <p class="text-gray-400">Feel free to send us your questions or request a <br> free consultation.</p>
+            <button class="bg-teal-500 text-white py-3 px-6 rounded-full hover:bg-teal-600 transition">
+                SEND A MESSAGE
+            </button>
+        </div>
+    </div>
+</footer>
+
+
+    </main>
+</body>
+
+</html>
